@@ -10,6 +10,7 @@ export default [
         tsconfigRootDir: '.',
         projectService: {
           allowDefaultProject: [
+            'babel.config.js',
             'eslint.config.js',
             'index.js',
             'metro.config.js',
