@@ -1,0 +1,28 @@
+{
+    "name": "close-ai",
+    "version": "1.0.0",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "start": "expo start --dev-client",
+        "android": "expo run:android",
+        "ios": "expo run:ios",
+        "web": "expo start --web"
+    },
+    "dependencies": {
+        "expo": "~53.0.20",
+        "expo-status-bar": "~2.2.3",
+        "react": "19.0.0",
+        "react-native": "0.79.5"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.20.0",
+        "@stylistic/eslint-plugin": "^5.2.3",
+        "@types/react": "~19.0.10",
+        "@vinicius1313/eslint-config": "^2.0.1",
+        "@vinicius1313/tsconfig": "^1.0.0",
+        "eslint": "^9.33.0",
+        "typescript": "^5.7.3",
+        "typescript-eslint": "^8.39.1"
+    }
+}
