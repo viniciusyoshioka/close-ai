@@ -2,6 +2,8 @@
     "extends": "@vinicius1313/tsconfig/tsconfig.json",
     "compilerOptions": {
         "strictNullChecks": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
     },
     "include": [
         "src",
