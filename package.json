@@ -4,6 +4,10 @@
     "private": true,
     "main": "index.js",
     "scripts": {
+        "postinstall": "npx patch-package",
+        "lint": "eslint '**/*.{js,ts,tsx}'",
+        "typecheck": "tsc --noEmit",
+        "test": "jest",
         "start": "expo start --dev-client",
         "android": "expo run:android",
         "ios": "expo run:ios",
