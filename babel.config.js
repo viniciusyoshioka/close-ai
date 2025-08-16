@@ -9,6 +9,7 @@ module.exports = function(api) {
       ['react-native-unistyles/plugin', {
         root: 'src',
       }],
+      'react-native-worklets/plugin',
     ],
 
     env: {
