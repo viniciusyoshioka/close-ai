@@ -2,9 +2,11 @@ import { typeORMDriver } from 'react-native-nitro-sqlite'
 import { DataSource } from 'typeorm'
 
 import { Constants } from '../utils/constants'
+import { ChatMessageEntity } from './entities/chat-message/chat-message.entity'
 import { ChatEntity } from './entities/chat/chat.entity'
 import { LogEntity } from './entities/log/log.entity'
 import { CreateChatTable1755366434077 } from './migrations/app/1755366434077-CreateChatTable'
+import { CreateChatMessageTable1755366466813 } from './migrations/app/1755366466813-CreateChatMessageTable'
 import { CreateLogTable1755366115210 } from './migrations/log/1755366115210-CreateLogTable'
 
 
@@ -13,8 +15,8 @@ export const appDataSource = new DataSource({
   database: Constants.database.app.fileName,
   location: Constants.database.app.location,
   driver: typeORMDriver,
-  entities: [ChatEntity],
-  migrations: [CreateChatTable1755366434077],
+  entities: [ChatEntity, ChatMessageEntity],
+  migrations: [CreateChatTable1755366434077, CreateChatMessageTable1755366466813],
 })
 
 

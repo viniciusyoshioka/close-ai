@@ -2,6 +2,8 @@ import { createContext, PropsWithChildren, useCallback, useContext, useEffect, u
 import { Alert } from 'react-native'
 
 import { appDataSource, logDataSource } from '../../data-source'
+import { ChatMessageRepository } from '../../entities/chat-message/chat-message.repository'
+import { ChatMessageService } from '../../entities/chat-message/chat-message.service'
 import { ChatRepository } from '../../entities/chat/chat.repository'
 import { ChatService } from '../../entities/chat/chat.service'
 import { LogRepository } from '../../entities/log/log.repository'
@@ -25,10 +27,13 @@ export function ServicesProvider(props: PropsWithChildren) {
     const chatRepository = new ChatRepository(appDataSource)
     const chatService = new ChatService({ chatRepository })
 
+    const chatMessageRepository = new ChatMessageRepository(appDataSource)
+    const chatMessageService = new ChatMessageService({ chatMessageRepository })
+
     const logRepository = new LogRepository(logDataSource)
     const logService = new LogService({ logRepository })
 
-    setServices({ chatService, logService })
+    setServices({ chatService, chatMessageService, logService })
   }, [])
 
   const prepareDataSources = useCallback(async () => {
